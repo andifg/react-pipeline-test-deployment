@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-pipeline-test-application
+  namespace: tekton-pipelines
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: react-pipeline-test-application
+  template:
+    metadata:
+      labels:
+        app: react-pipeline-test-application
+        app.kubernetes.io/name: react-pipeline-test-application
+    spec:
+      containers:
+        - name: my-container
+          image: image-registry.openshift-image-registry.svc:5000/tekton-resources/counter:1688118841-8434fe3f316d84a1ad15e0b6d3a3119fdf177544
+          ports:
+            - containerPort: 80
