@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: my-container
-          image: image-registry.openshift-image-registry.svc:5000/tekton-resources/counter:2023-07-13-07-03-cb4063217c7eb41c140f80936b9850c40e22a4af
+          image: image-registry.openshift-image-registry.svc:5000/tekton-resources/counter:2023-07-23-20-07-6564797b20474794209233c4e687b054e3ce367b
           ports:
             - containerPort: 80
